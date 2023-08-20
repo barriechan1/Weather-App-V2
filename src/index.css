@@ -96,10 +96,11 @@ a {
   display: inline;
   position: relative;
   top: -55px;
-  left: 5px;
+
 }
-#icon {
-  
+.column .active {
+  color: #48484a;
+  cursor: default;
 }
 
 small {
