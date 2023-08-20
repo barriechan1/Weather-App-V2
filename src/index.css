@@ -20,22 +20,14 @@ button {
   padding: 5px 10px;
   box-shadow: rgba(173, 181, 186, 0.8) 3px 3px 3px;
 }
-.col-2 {
-  margin: 20px auto;
-  float: none;
-  width: 30%;
-  text-align: left;
-  font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #48484a;
-}
+
 .accents1 {
   list-style-type: none;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
   color: #48484a;
   position: relative;
-  top: -130px;
+  top: -250px;
   left: 400px;
   line-height: 1.6;
 }
@@ -45,24 +37,35 @@ button {
   font-family: Arial, Helvetica, sans-serif;
   color: #48484a;
   position: relative;
-  top: -265px;
+  top: -335px;
   left: 500px;
   line-height: 1.6;
 }
 
 h1 {
   font-size: 30px;
+  padding: 5px 5px 5px 40px;
   font-family: Arial, Helvetica, sans-serif;
   color: #48484a;
   line-height: 5px;
 }
 
+li::first-letter {
+text-transform: capitalize;
+}
+#todays-date-and-time {
+  list-style-type: none;
+  padding: 5px 0px ;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #48484a;
+  
+}
 #description {
   list-style-type: none;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: #48484a;
-  text-transform: capitalize;
 }
 
 #temperature {
@@ -79,9 +82,11 @@ h1 {
   color: #48484a;
   display: inline;
   position: relative;
-  top: -60px;
+  top: -155px;
   left: 120px;
 }
 #icon {
   line-height: 0px;
 }
+
+

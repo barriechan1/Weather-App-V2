@@ -1,32 +1,38 @@
-//function formatDate() {
-//let days = [
-//"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday", "Saturday",
-//];
-//let day = days[currentTime.getDay()];
-//let date = currentTime.getDate();
-//if (date < 10) {
-// date = `0${date}`;
-//}
-//let hour = currentTime.getHours();
-//if (hour < 10) {
-// hour = `0${hour}`;
-//}
-// let minutes = currentTime.getMinutes();
-// if (minutes < 10) {
-// minutes = `0${minutes}`;
-//}
-//return `${day}, ${date}, ${hour}:${minutes}`;
-//}
-//let h2 = document.querySelector("#todays-date-and-time");
-//let currentTime = new Date();
-//h2.innerHTML = formatDate(currentTime);
+function formatDate() {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[currentTime.getDay()];
+  let date = currentTime.getDate();
+  if (date < 10) {
+    date = `0${date}`;
+  }
+  let hour = currentTime.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = currentTime.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day}, ${date}, ${hour}:${minutes}`;
+}
+let h2 = document.querySelector("#todays-date-and-time");
+let currentTime = new Date();
+h2.innerHTML = formatDate(currentTime);
 
 function displayTemperature(response) {
   console.log(response.data);
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
-  
+
   let tempMaxElement = document.querySelector("#temp-max");
   let tempMinElement = document.querySelector("#temp-min");
   let humidityElement = document.querySelector("#humidity");
