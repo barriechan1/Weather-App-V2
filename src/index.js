@@ -21,30 +21,41 @@
 //let currentTime = new Date();
 //h2.innerHTML = formatDate(currentTime);
 
-//function showTemperature(response) {
-// let descriptionElement = document.querySelector("#description");
-//descriptionElement.innerHTML = response.data.weather[0].description;
-//document.querySelector("h1").innerHTML = response.data.name;
-// document.querySelector("#main-temp").innerHTML = `${Math.round(
-// response.data.main.temp
-//)}º`;
-//let iconElement = document.querySelector("#icon");
-//iconElement.setAttribute(
-//  "src"`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-//);
-//}
+function displayTemperature(response) {
+  console.log(response.data);
+  let cityElement = document.querySelector("#city");
+  let temperatureElement = document.querySelector("#temperature");
+  let descriptionElement = document.querySelector("#description");
+  
+  let tempMaxElement = document.querySelector("#temp-max");
+  let tempMinElement = document.querySelector("#temp-min");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+
+  temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}º`;
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  tempMaxElement.innerHTML = `${Math.round(response.data.main.temp_max)}º `;
+  tempMinElement.innerHTML = ` ${Math.round(response.data.main.temp_min)}º `;
+  humidityElement.innerHTML = `${response.data.main.humidity}%`;
+  windElement.innerHTML = `${Math.round(response.data.wind.speed)}mph`;
+
+  //let iconElement = document.querySelector("#icon");
+  //iconElement.setAttribute(
+  //  "src"`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  //);
+}
 
 let apiKey = "720611257f683e4c21c243913abd2051";
 let city = "Portland";
 let units = "imperial";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Portland&appid${apiKey}`;
-console.log(apiUrl);
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
+axios.get(apiUrl).then(displayTemperature);
 // let city = document.querySelector("#city-search").value;
 
 //function showInput(event) {
 //  event.preventDefault();
-// axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 //}
 
 //let input = document.querySelector("form");

@@ -21,7 +21,7 @@
             class="search-bar"
             id="city-search"
             type="search"
-            placeholder="Search city or zip code or else"
+            placeholder="Search city"
             type="submit"
           />
         </form>
@@ -29,48 +29,37 @@
       <div id="current-button"><button>Current Location</button></div>
       <div class="row">
         <div class="column">
-          <h1></h1>
-          <h2 class="todays-date-and-time" id="todays-date-and-time"></h2>
-          <div id="description"></div>
-          <div id="main-temp">
+          <h1 id="city"></h1>
+        
+            <ul>
+              <li class="todays-date-and-time" id="todays-date-and-time"></li>
+              <li id="description"></li>
+              <li id="temperature"></li>
+            </ul>
             <img
               src="https://openweathermap.org/img/wn/10d@2x.png"
               alt="clear"
               class="float-left"
               id="icon"
             />
-            59º
-          </div>
           <span class="fahrenheit-celsius">
             <a href="#" id="fahrenheit"> F</a> |
             <a href="#" id="celsius">C</a>
           </span>
         </div>
         <div class="column">
-          <div class="accents1">
-            Sunrise
-            <br />
-            Sunset
-            <br />
-            High/Low
-            <br />
-            Humidity
-            <br />
-            Wind
-          </div>
+          <ul class="accents1">
+            <li>High/Low</li>
+            <li>Humidity</li>
+            <li>Wind</li>
+          </ul>
         </div>
         <div class="column">
-          <div class="accents2">
-            5:32am
-            <br />
-            8:59pm
-            <br />
-            72º/59º
-            <br />
-            75%
-            <br />
-            1%
-          </div>
+          <ul class="accents2">
+            <li><span id="temp-max"></span>/<span id="temp-min"></span></li>
+            <li id="humidity"></li>
+            <li id="wind"></li>
+          </ul>
         </div>
       </div>
     </div>
