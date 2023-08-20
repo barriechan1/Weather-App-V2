@@ -13,6 +13,7 @@
     ></script>
   </head>
   <body>
+    <div id="wrapper">
     <div class="main-weather">
       <div class="container">
         <div class="col-2"></div>
@@ -27,21 +28,23 @@
         </form>
       </div>
       <div id="current-button"><button>Current Location</button></div>
+      <h1 id="city"></h1>
+
+      <ul>
+        <li class="todays-date-and-time" id="todays-date-and-time"></li>
+        <li id="description"></li>
+      </ul>
+
       <div class="row">
         <div class="column">
-          <h1 id="city"></h1>
-        
-            <ul>
-              <li class="todays-date-and-time" id="todays-date-and-time"></li>
-              <li id="description"></li>
-              <li id="temperature"></li>
-            </ul>
-            <img
-              src="https://openweathermap.org/img/wn/10d@2x.png"
-              alt="clear"
-              class="float-left"
-              id="icon"
-            />
+          <img
+            src="https://openweathermap.org/img/wn/10d@2x.png"
+            alt="clear"
+            class="float-left"
+            id="icon"
+          />
+          <strong id="temperature"></strong>
+
           <span class="fahrenheit-celsius">
             <a href="#" id="fahrenheit"> F</a> |
             <a href="#" id="celsius">C</a>
@@ -62,6 +65,8 @@
           </ul>
         </div>
       </div>
+    </div>
+    <small> <a href="https://openweathermap.org/">Open-source code</a> by Barrie Chan</small>
     </div>
     <script src="src/index.js"></script>
   </body>
