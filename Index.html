@@ -14,59 +14,68 @@
   </head>
   <body>
     <div id="wrapper">
-    <div class="main-weather">
-      <div class="container">
-        <div class="col-2"></div>
-        <form id="search-bar">
-          <input
-            class="search-bar"
-            id="city-search"
-            type="search"
-            placeholder="Search city"
-            type="submit"
-          />
-        </form>
+      <div class="main-weather">
+        <div class="container">
+          <div class="row">
+            <div class="col-9">
+              <form id="search-form">
+                <input
+                  id="city-input"
+                  type="search"
+                  placeholder="Search a city"
+                  type="submit"
+                  class="form-control"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="col-3">
+            <div id="current-button"><button>Current Location</button></div>
+          </div>
+        </div>
+
+        <h1 id="city"></h1>
+
+        <ul>
+          <li class="todays-date-and-time" id="todays-date-and-time"></li>
+          <li id="description"></li>
+        </ul>
+
+        <div class="row">
+          <div class="column">
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt="clear"
+              class="float-left"
+              id="icon"
+            />
+            <strong id="temperature"></strong>
+
+            <span class="fahrenheit-celsius">
+              <a href="#" id="fahrenheit"> F</a> |
+              <a href="#" id="celsius">C</a>
+            </span>
+          </div>
+          <div class="column">
+            <ul class="accents1">
+              <li>High/Low</li>
+              <li>Humidity</li>
+              <li>Wind</li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul class="accents2">
+              <li><span id="temp-max"></span>/<span id="temp-min"></span></li>
+              <li id="humidity"></li>
+              <li id="wind"></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div id="current-button"><button>Current Location</button></div>
-      <h1 id="city"></h1>
-
-      <ul>
-        <li class="todays-date-and-time" id="todays-date-and-time"></li>
-        <li id="description"></li>
-      </ul>
-
-      <div class="row">
-        <div class="column">
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt="clear"
-            class="float-left"
-            id="icon"
-          />
-          <strong id="temperature"></strong>
-
-          <span class="fahrenheit-celsius">
-            <a href="#" id="fahrenheit"> F</a> |
-            <a href="#" id="celsius">C</a>
-          </span>
-        </div>
-        <div class="column">
-          <ul class="accents1">
-            <li>High/Low</li>
-            <li>Humidity</li>
-            <li>Wind</li>
-          </ul>
-        </div>
-        <div class="column">
-          <ul class="accents2">
-            <li><span id="temp-max"></span>/<span id="temp-min"></span></li>
-            <li id="humidity"></li>
-            <li id="wind"></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <small> <a href="https://openweathermap.org/">Open-source code</a> by Barrie Chan</small>
+      <small>
+        <a href="https://openweathermap.org/">Open-source code</a> by Barrie
+        Chan</small
+      >
     </div>
     <script src="src/index.js"></script>
   </body>

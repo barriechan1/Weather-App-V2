@@ -28,7 +28,6 @@ let currentTime = new Date();
 h2.innerHTML = formatDate(currentTime);
 
 function displayTemperature(response) {
-  console.log(response.data);
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
@@ -46,20 +45,23 @@ function displayTemperature(response) {
   tempMinElement.innerHTML = ` ${Math.round(response.data.main.temp_min)}º `;
   humidityElement.innerHTML = `${response.data.main.humidity}%`;
   windElement.innerHTML = `${Math.round(response.data.wind.speed)}mph`;
-  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+}
+function search(city) {
+  let apiKey = "720611257f683e4c21c243913abd2051";
+  let units = "imperial";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayTemperature);
 }
 
-let apiKey = "720611257f683e4c21c243913abd2051";
-let city = "Portland";
-let units = "imperial";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
 
-axios.get(apiUrl).then(displayTemperature);
-// let city = document.querySelector("#city-search").value;
-
-//function showInput(event) {
-//  event.preventDefault();
-//}
-
-//let input = document.querySelector("form");
-//input.addEventListener("submit", showInput);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
