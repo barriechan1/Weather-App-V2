@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App V2</title>
+    <link rel="stylesheet" href="src/index.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+      <div class="main-weather">
+      <div class="container">
+          <div class="col-2"></div>
+          <form id="search-bar">
+              <input
+              class="search-bar"
+              id="city-search"
+              type="search"
+              placeholder="Search city or zip code or else"
+              type="submit"
+              />
+            </form>
+        </div>
+        <div id="current-button"><button>Current Location</button></div>
+        <div class="row">
+          <div class="column">
+            <h1>Portland</h1>
+            <h2 class="todays-date-and-time" id="todays-date-and-time">Monday, August 12th, 12:00</h2>
+            <div id="main-emoji">☁️</div>
+            <div id="main-temp">59º</div>
+            <span class="fahrenheit-celsius">
+              <a href="#" id="fahrenheit"> F</a> |
+              <a href="#" id="celsius">C</a>
+            </span>
+          </div>
+          <div class="column">
+            <div class="accents1">
+              Sunrise
+              <br />
+              Sunset
+              <br />
+              High/Low
+              <br />
+              Humidity
+              <br />
+              Wind
+            </div>
+          </div>
+          <div class="column">
+            <div class="accents2">
+              5:32am
+              <br />
+              8:59pm
+              <br />
+              72º/59º
+              <br />
+              75%
+              <br />
+              1%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

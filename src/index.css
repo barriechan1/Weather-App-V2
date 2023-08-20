@@ -1,0 +1,79 @@
+form {
+  margin: 0 auto;
+  display: inline;
+  border-radius: 5px;
+  display: inline-flex;
+}
+.main-weather {
+  border: 5px solid #48484a;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+button {
+  display: inline;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(100, 196, 221);
+  color: white;
+  padding: 5px 10px;
+  box-shadow: rgba(173, 181, 186, 0.8) 3px 3px 3px;
+}
+.col-2 {
+  margin: 20px auto;
+  float: none;
+  width: 30%;
+  text-align: left;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #48484a;
+}
+.accents1 {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #48484a;
+  position: relative;
+  top: -130px;
+  left: 400px;
+  line-height: 1.6;
+}
+.accents2 {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #48484a;
+  position: relative;
+  top: -250px;
+  left: 500px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #48484a;
+  line-height: 5px;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #48484a;
+}
+
+#main-temp {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #48484a;
+}
+
+.fahrenheit-celsius {
+     font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #48484a;
+  display: inline;
+  position: relative;
+  top: -60px;
+  left: 120px;
+}
