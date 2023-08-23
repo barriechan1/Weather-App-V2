@@ -13,7 +13,6 @@ form {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  
 }
 button {
   display: inline;
@@ -96,7 +95,6 @@ a {
   display: inline;
   position: relative;
   top: -55px;
-
 }
 .column .active {
   color: #48484a;
@@ -107,4 +105,24 @@ small {
   text-align: center;
   font-size: 8px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.weather-forecast {
+  max-width: 500px;
+  margin: 30px auto;
+  border: 5px solid #48484a;
+  padding: 20px;
+}
+
+.weather-forecast-date {
+  font-size: 15px;
+  padding: 10px 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #48484a;
+}
+
+.weather-forecast-temps {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #48484a;
 }
