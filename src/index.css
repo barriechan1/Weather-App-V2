@@ -107,7 +107,7 @@ small {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.weather-forecast {
+.weather-forecast-shell {
   max-width: 500px;
   margin: 30px auto;
   border: 5px solid #48484a;

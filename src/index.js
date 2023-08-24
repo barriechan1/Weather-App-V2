@@ -27,6 +27,34 @@ let h2 = document.querySelector("#todays-date-and-time");
 let currentTime = new Date();
 h2.innerHTML = formatDate(currentTime);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thur", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+    <div class="col-2">
+   <div class="weather-forecast-date">Thur</div>
+       <img
+         src="https://openweathermap.org/img/wn/10d@2x.png"
+         alt=""
+         width="42"
+       />
+     <div class="weather-forecast-temps">
+       <span class="weather-forecast-date-high">
+         <strong>18º</strong></span>
+       <span class="weather-forecast-date-low">12º</span>
+     </div>
+ </div>;`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
@@ -93,3 +121,5 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 search("Portland");
+
+displayForecast();
