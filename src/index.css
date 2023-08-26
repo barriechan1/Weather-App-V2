@@ -5,19 +5,19 @@ form {
   display: inline-flex;
 }
 #wrapper {
-  max-width: 500px;
+  max-width: 550px;
   margin: 0 auto;
 }
 .main-weather {
   border: 5px solid #48484a;
-  max-width: 500px;
+  max-width: 550px;
   margin: 0 auto;
   padding: 20px;
 }
 button {
-  display: inline;
   margin: 0 auto;
   border-radius: 20px;
+  font-size: smaller;
   border: none;
   background-color: rgb(100, 196, 221);
   color: white;
@@ -108,7 +108,7 @@ small {
 }
 
 .weather-forecast-shell {
-  max-width: 500px;
+  max-width: 550px;
   margin: 30px auto;
   border: 5px solid #48484a;
   padding: 20px;
