@@ -16,9 +16,8 @@ form {
 ul {
   margin: 0;
   padding: 0;
-  
 }
-.column{
+.column {
   line-height: 0%;
 }
 .accents1 {
@@ -54,7 +53,6 @@ h1 {
 }
 li::first-letter {
   text-transform: capitalize;
-  
 }
 #todays-date-and-time {
   list-style-type: none;
